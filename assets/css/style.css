@@ -1,0 +1,17 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.pokeBG {
+    background-image: url("https://images.pexels.com/photos/1716861/pexels-photo-1716861.jpeg?cs=srgb&dl=close-up-figurine-pikachu-pokemon-1716861.jpg&fm=jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
