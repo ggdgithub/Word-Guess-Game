@@ -809,4 +809,30 @@ var pokemon = [
 	"Zeraora",
 	"Meltan",
 	"Melmetal"
-]
+];
+
+// Random Pokemon picker
+var randPokemon = pokemon[Math.floor(Math.random() * pokemon.length)];
+
+// how do I make the pokemon blank?
+for (var i= 0; i < pokemon.length; i++) {
+	pokemonAnswer[i] = "_"
+}
+
+var remainingLetters = pokemon.length;
+
+// While Pokemon is not guessed
+	// Show player the following on page
+		// Letters guessed
+		// Correct letters
+		// Lives left
+
+		// If player wants to quit
+			// End Game
+		// Else if player guesses more than one letter
+			// Tell the player to pick ONE letter
+		// Else if
+			// Guess is in word
+				// Update word progress
+		// Else
+			// Penalize them
