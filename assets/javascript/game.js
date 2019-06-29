@@ -811,28 +811,48 @@ var pokemon = [
 	"Melmetal"
 ];
 
-// Random Pokemon picker
-var randPokemon = pokemon[Math.floor(Math.random() * pokemon.length)];
+var randomPokemon = pokemon[Math.floor(Math.random() * pokemon.length)];
 
-// how do I make the pokemon blank?
-for (var i= 0; i < pokemon.length; i++) {
-	pokemonAnswer[i] = "_"
+// make an array for the answer
+var answerPokemon = [];
+
+// then tell that array how long it is, in underscores
+for (var i = 0; i < randomPokemon.length; i++) {
+	answerPokemon[i] = "_"
 }
 
-var remainingLetters = pokemon.length;
+// This variable is for the game loop
+var remainingLetters = randomPokemon.length;
 
-// While Pokemon is not guessed
-	// Show player the following on page
-		// Letters guessed
-		// Correct letters
-		// Lives left
+// Game Loop Starts
+while (remainingLetters > 0) {
+	// Show Progress
+	alert(answerPokemon.join(" "));
 
-		// If player wants to quit
-			// End Game
-		// Else if player guesses more than one letter
-			// Tell the player to pick ONE letter
-		// Else if
-			// Guess is in word
-				// Update word progress
-		// Else
-			// Penalize them
+// Get the Player's Guess
+	var guess = prompt("Guess a letter, or click Cancel to end the game.");
+
+// conditions from player guess
+
+	if (guess === null) {
+		// Exit
+		break;
+	}
+
+	else if (guess.length !== 1) {
+		alert("Please enter only ONE letter.");
+	}
+
+	else {
+		// update game state
+		for (var x = 0; x < pokemon.length; x++) {
+			if (pokemon[x] === guess) {
+				answerPokemon[x] = guess;
+				remainingLetters--;
+			}
+		}
+	}
+}
+
+alert(answerPokemon.join(" "));
+alert("Good Job! The answer was " + randomPokemon);

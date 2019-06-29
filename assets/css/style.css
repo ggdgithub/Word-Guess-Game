@@ -4,7 +4,7 @@ body, html {
 }
 
 .pokeBG {
-    background-image: url("https://images.pexels.com/photos/1716861/pexels-photo-1716861.jpeg?cs=srgb&dl=close-up-figurine-pikachu-pokemon-1716861.jpg&fm=jpg");
+    background-image: url("../images/DetectivePikachu.jpg");
     height: 60%;
     background-position: center;
     background-repeat: no-repeat;
