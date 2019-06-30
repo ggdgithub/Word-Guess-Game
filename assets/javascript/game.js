@@ -854,5 +854,6 @@ while (remainingLetters > 0) {
 	}
 }
 
+// Somehow also get the guesses to show in the updates...
 alert(answerPokemon.join(" "));
 alert("Good Job! The answer was " + randomPokemon);
